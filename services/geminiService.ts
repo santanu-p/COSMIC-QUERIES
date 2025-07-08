@@ -9,8 +9,8 @@ if (!API_KEY) {
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
 
-const PROMPT = `Generate a single, mind-blowing, and concise physics fact. 
-The fact should be easy for a layperson to understand but still scientifically accurate and intriguing. 
+const PROMPT = `Generate a single, mind-blowing, surprising, and concise physics fact. 
+The fact should be easy for a higher study student to understand but still scientifically accurate and intriguing. 
 Present only the fact itself, without any introductory phrases like "Here's a fact:" or any conversational filler.
 The fact should be a complete sentence or two.`;
 
