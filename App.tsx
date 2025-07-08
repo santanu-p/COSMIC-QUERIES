@@ -111,7 +111,7 @@ const App: React.FC = () => {
             </div>
         </main>
         <footer className="relative z-10 bottom-4 text-center text-gray-500 text-sm mt-10">
-            <p>Powered by Gemini. Discover a new wonder of the cosmos with each click.</p>
+            <p>&copy; {new Date().getFullYear()} Santanu Pradhan. All rights reserved. Designed for curious minds. Discover a new wonder of the cosmos with each click.</p>
         </footer>
         <style>{`
           @keyframes fade-in {
