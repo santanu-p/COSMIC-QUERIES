@@ -1,0 +1,6 @@
+{
+  "name": "Cosmic Queries",
+  "description": "An interactive web app that uses Gemini to generate fascinating and random physics facts. Your daily dose of physics astonishment awaits!",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
