@@ -168,7 +168,7 @@ The button is your primary control. It's also part of the `App.tsx` file:
                  <span className="relative z-10">{isLoading ? 'Summoning a Fact...' : 'Reveal New Fact'}</span>
               </button>
 ```
-*   `onClick={handleGenerateFact}`: This tells the button what to do when clicked. `handleGenerateFact` is a special function that asks for a new fact. (We'll learn more about this in [Application State Management](tutorials/02_application_state_management_.md)).
+*   `onClick={handleGenerateFact}`: This tells the button what to do when clicked. `handleGenerateFact` is a special function that asks for a new fact. (We'll learn more about this in [Application State Management](02_application_state_management_.md)).
 *   `disabled={isLoading}`: This makes the button unclickable (greyed out) when the app is `isLoading` a fact. You wouldn't want to spam the button!
 *   The text inside the button changes (`'Summoning a Fact...'` or `'Reveal New Fact'`) based on whether the app is currently loading.
 
@@ -212,7 +212,7 @@ In this chapter, we explored the **User Interface (UI)** of `COSMIC-QUERIES`. We
 
 We kept things simple by focusing on what you see and interact with. But what makes the UI *change*? How does the `isLoading` or `error` information get to the `FactDisplay` component? That's where **Application State Management** comes in, which we'll dive into in the next chapter!
 
-[Next Chapter: Application State Management](tutorials/02_application_state_management_.md)
+[Next Chapter: Application State Management](02_application_state_management_.md)
 
 ---
 
