@@ -1,6 +1,6 @@
 # Chapter 4: Reusable UI Components
 
-Welcome back, intrepid explorer! In [Chapter 1: User Interface (UI)](tutorials/01_user_interface__ui__.md), we navigated the `COSMIC-QUERIES` cockpit, seeing all its controls and displays. In [Chapter 2: Application State Management](tutorials/02_application_state_management_.md), we learned how the app remembers things and updates its displays. And in [Chapter 3: AI Fact Generation Service](tutorials/03_ai_fact_generation_service_.md), we uncovered how those amazing physics facts are conjured up from the AI.
+Welcome back, intrepid explorer! In [Chapter 1: User Interface (UI)](01_user_interface__ui__.md), we navigated the `COSMIC-QUERIES` cockpit, seeing all its controls and displays. In [Chapter 2: Application State Management](02_application_state_management_.md), we learned how the app remembers things and updates its displays. And in [Chapter 3: AI Fact Generation Service](03_ai_fact_generation_service_.md), we uncovered how those amazing physics facts are conjured up from the AI.
 
 Now, let's talk about *how* we build the UI itself in a smart, efficient way. Imagine building with LEGO bricks. You don't build a new wheel every time you need one for a car, train, or robot. You just grab a pre-made wheel brick!
 
@@ -86,7 +86,7 @@ const App: React.FC = () => {
 };
 ```
 **Explanation:**
-*   `fact={fact}`: We pass the value of our `fact` state variable (from [Chapter 2: Application State Management](tutorials/02_application_state_management_.md)) to the `FactDisplay` component.
+*   `fact={fact}`: We pass the value of our `fact` state variable (from [Chapter 2: Application State Management](02_application_state_management_.md)) to the `FactDisplay` component.
 *   `isLoading={isCardLoading}`: We pass the `isCardLoading` state variable.
 *   `error={error}`: We pass the `error` state variable.
 
@@ -215,7 +215,7 @@ In this chapter, we learned about the power of **Reusable UI Components**. We di
 
 By breaking down our UI into smaller, focused components, `COSMIC-QUERIES` becomes much easier to understand and extend. Now that we understand all the pieces of our app, the final step is to learn how to prepare and run our `COSMIC-QUERIES` project on your computer! That's what we'll cover in the next chapter.
 
-[Next Chapter: Build and Environment Configuration](tutorials/05_build_and_environment_configuration_.md)
+[Next Chapter: Build and Environment Configuration](05_build_and_environment_configuration_.md)
 
 ---
 
