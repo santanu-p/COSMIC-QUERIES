@@ -1,6 +1,6 @@
 # Chapter 5: Build and Environment Configuration
 
-Welcome back, curious mind! In our journey through `COSMIC-QUERIES`, we've explored the amazing [User Interface (UI)](tutorals/01_user_interface__ui__.md), understood how the app manages its [Application State](tutorals/02_application_state_management_.md), unveiled the secrets of the [AI Fact Generation Service](tutorals/03_ai_fact_generation_service_.md), and learned how we build the UI using [Reusable UI Components](tutorals/04_reusable_ui_components_.md).
+Welcome back, curious mind! In our journey through `COSMIC-QUERIES`, we've explored the amazing [User Interface (UI)](01_user_interface__ui__.md), understood how the app manages its [Application State](02_application_state_management_.md), unveiled the secrets of the [AI Fact Generation Service](03_ai_fact_generation_service_.md), and learned how we build the UI using [Reusable UI Components](04_reusable_ui_components_.md).
 
 Now, imagine you've gathered all the perfect ingredients for a delicious cake (your code files, UI components, AI service). You have the recipe, but how do you actually *bake* it? How do you prepare it so it can be served hot and fresh from the oven, ready for anyone to enjoy?
 
@@ -58,7 +58,7 @@ Before you start baking, you need your tools and ingredients!
 
 ### 2. Setting up the Secret Key: `.env.local`
 
-Remember our [AI Fact Generation Service](tutorals/03_ai_fact_generation_service_.md) needed a secret `API_KEY` to talk to Google Gemini? This key is *sensitive* information, like a password. You never want to put passwords directly into your main code files because they might accidentally get shared.
+Remember our [AI Fact Generation Service](03_ai_fact_generation_service_.md) needed a secret `API_KEY` to talk to Google Gemini? This key is *sensitive* information, like a password. You never want to put passwords directly into your main code files because they might accidentally get shared.
 
 This is where **Environment Variables** and the `.env.local` file come in.
 
@@ -151,7 +151,7 @@ This file is a central hub for any Node.js/JavaScript project.
     *   `"preview": "vite preview"`: This command lets you quickly check how your "production" build looks without needing a full web server.
 *   **`dependencies`**: These are the libraries our *app needs to run*.
     *   `react`, `react-dom`: The core libraries for building our UI.
-    *   `@google/genai`: The library that helps our [AI Fact Generation Service](tutorals/03_ai_fact_generation_service_.md) talk to Google Gemini.
+    *   `@google/genai`: The library that helps our [AI Fact Generation Service](03_ai_fact_generation_service_.md) talk to Google Gemini.
 *   **`devDependencies`**: These are libraries our *development process needs*, but not the final running app itself.
     *   `typescript`: The language we write our code in.
     *   `vite`: Our build tool.
@@ -206,7 +206,7 @@ export default defineConfig(({ mode }) => {
 *   `define: { 'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY) }`: This is how our secret key gets into our app's code.
     *   It creates a global variable called `process.env.API_KEY` (and `process.env.GEMINI_API_KEY`) within our application.
     *   The `JSON.stringify` makes sure the value is treated as a string.
-    *   Now, in our [AI Fact Generation Service](tutorals/03_ai_fact_generation_service_.md) (`services/geminiService.ts`), when we write `const API_KEY = process.env.API_KEY;`, it can successfully read the value you set in `.env.local`! This is the bridge that connects your secret key to the part of the code that needs it.
+    *   Now, in our [AI Fact Generation Service](03_ai_fact_generation_service_.md) (`services/geminiService.ts`), when we write `const API_KEY = process.env.API_KEY;`, it can successfully read the value you set in `.env.local`! This is the bridge that connects your secret key to the part of the code that needs it.
 
 This setup ensures that sensitive API keys are securely managed and only accessed during the build process, never exposed in your public code.
 
