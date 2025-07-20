@@ -28,14 +28,14 @@ flowchart TD
 ## Chapters
 
 1. [User Interface (UI)
-](01_user_interface__ui__.md)
+](tutorials/01_user_interface__ui__.md)
 2. [Application State Management
-](02_application_state_management_.md)
+](tutorials/02_application_state_management_.md)
 3. [AI Fact Generation Service
-](03_ai_fact_generation_service_.md)
+](tutorials/03_ai_fact_generation_service_.md)
 4. [Reusable UI Components
-](04_reusable_ui_components_.md)
+](tutorials/04_reusable_ui_components_.md)
 5. [Build and Environment Configuration
-](05_build_and_environment_configuration_.md)
+](tutorials/05_build_and_environment_configuration_.md)
 
 ---
