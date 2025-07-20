@@ -1,6 +1,6 @@
 # Chapter 2: Application State Management
 
-Welcome back, curious explorer! In [Chapter 1: User Interface (UI)](tutorials/01_user_interface__ui__.md), we toured the "cockpit" of `COSMIC-QUERIES`, learning about what you see and interact with. We saw how the `FactDisplay` can show a loading spinner, an error message, or a fascinating physics fact. We also observed how the "Reveal New Fact" button changes its text and becomes unclickable during loading.
+Welcome back, curious explorer! In [Chapter 1: User Interface (UI)](01_user_interface__ui__.md), we toured the "cockpit" of `COSMIC-QUERIES`, learning about what you see and interact with. We saw how the `FactDisplay` can show a loading spinner, an error message, or a fascinating physics fact. We also observed how the "Reveal New Fact" button changes its text and becomes unclickable during loading.
 
 But here's a crucial question: How does the UI *know* what to show? How does it switch between "loading," "fact," and "error" states? How does the button automatically disable itself? The answer lies in something called **Application State Management**.
 
@@ -129,7 +129,7 @@ const App: React.FC = () => {
 
 ## How State Powers the UI
 
-Now let's see how these state variables directly control what the UI shows, connecting back to [Chapter 1: User Interface (UI)](tutorials/01_user_interface__ui__.md).
+Now let's see how these state variables directly control what the UI shows, connecting back to [Chapter 1: User Interface (UI)](01_user_interface__ui__.md).
 
 ### The `FactDisplay` Component
 
@@ -269,9 +269,9 @@ In this diagram, the `AppState` acts as the central brain. When the `User` click
 
 In this chapter, we unveiled the magic behind how `COSMIC-QUERIES` keeps track of what's happening internally: **Application State Management**. We learned that the app's "memory" consists of key pieces of information like `fact`, `isLoading`, and `error`. React's `useState` hook allows us to store and update this information, `useEffect` lets us perform actions when the app starts or state changes, and `useCallback` helps ensure our functions are stable.
 
-By mastering these fundamental concepts, we enable our UI to be dynamic and responsive, providing you with a seamless experience. But how do we actually *get* those fascinating physics facts? That's the secret held by the [AI Fact Generation Service](tutorials/03_ai_fact_generation_service_.md), our next exciting topic!
+By mastering these fundamental concepts, we enable our UI to be dynamic and responsive, providing you with a seamless experience. But how do we actually *get* those fascinating physics facts? That's the secret held by the [AI Fact Generation Service](03_ai_fact_generation_service_.md), our next exciting topic!
 
-[Next Chapter: AI Fact Generation Service](tutorials/03_ai_fact_generation_service_.md)
+[Next Chapter: AI Fact Generation Service](03_ai_fact_generation_service_.md)
 
 ---
 
