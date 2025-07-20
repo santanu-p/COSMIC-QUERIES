@@ -232,29 +232,30 @@ Let's trace how the state changes when you click the "Reveal New Fact" button:
 
 ```mermaid
 sequenceDiagram
+    %% define alias → pretty label
     participant User
-    participant Button
-    participant AppState (fact, isLoading, error)
-    participant FactDisplay
-    participant AIFactService
+    participant Btn as "Button"
+    participant State as "AppState (fact, isLoading, error)"
+    participant Display as "FactDisplay"
+    participant Service as "AIFactService"
 
-    User->>Button: Clicks "Reveal New Fact"
-    Button->>AppState: Calls handleGenerateFact
-    Note over AppState: isLoading becomes TRUE<br>error becomes NULL
-    AppState->>Button: Update button text to "Summoning a Fact..."<br>Disable button
-    AppState->>FactDisplay: (isCardLoading becomes FALSE if fact exists)<br>FactDisplay keeps old fact or clears error
-    AppState->>AIFactService: Request new physics fact
-    AIFactService-->>AppState: Returns "New awesome fact!" (or an error)
+    User->>Btn: Clicks "Reveal New Fact"
+    Btn->>State: Calls handleGenerateFact
+    Note over State: isLoading becomes TRUE\nerror becomes NULL
+    State->>Btn: Update button text to "Summoning a Fact..."\nDisable button
+    State->>Display: (isCardLoading becomes FALSE if fact exists)\nFactDisplay keeps old fact or clears error
+    State->>Service: Request new physics fact
+    Service-->>State: Returns "New awesome fact!" (or an error)
     alt Fact Retrieved Successfully
-        AppState->>AppState: fact becomes "New awesome fact!"
-        Note over AppState: isLoading becomes FALSE
-        AppState->>FactDisplay: Update to show "New awesome fact!"
-        AppState->>Button: Update button text to "Reveal New Fact"<br>Enable button
+        State->>State: fact becomes "New awesome fact!"
+        Note over State: isLoading becomes FALSE
+        State->>Display: Update to show "New awesome fact!"
+        State->>Btn: Update button text to "Reveal New Fact"\nEnable button
     else Error Occurred
-        AppState->>AppState: error becomes "Could not fetch fact"<br>fact becomes NULL
-        Note over AppState: isLoading becomes FALSE
-        AppState->>FactDisplay: Update to show error message
-        AppState->>Button: Update button text to "Reveal New Fact"<br>Enable button
+        State->>State: error becomes "Could not fetch fact"\nfact becomes NULL
+        Note over State: isLoading becomes FALSE
+        State->>Display: Update to show error message
+        State->>Btn: Update button text to "Reveal New Fact"\nEnable button
     end
 ```
 
