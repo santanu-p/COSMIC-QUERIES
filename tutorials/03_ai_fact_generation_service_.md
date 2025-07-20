@@ -1,6 +1,6 @@
 # Chapter 3: AI Fact Generation Service
 
-Welcome back, intrepid explorer! In [Chapter 1: User Interface (UI)](tutorials/01_user_interface__ui__.md), we discovered the "cockpit" of `COSMIC-QUERIES`, and in [Chapter 2: Application State Management](tutorials/02_application_state_management_.md), we learned how the app keeps track of what's happening internally, deciding when to show a loading spinner, a fact, or an error.
+Welcome back, intrepid explorer! In [Chapter 1: User Interface (UI)](01_user_interface__ui__.md), we discovered the "cockpit" of `COSMIC-QUERIES`, and in [Chapter 2: Application State Management](02_application_state_management_.md), we learned how the app keeps track of what's happening internally, deciding when to show a loading spinner, a fact, or an error.
 
 But there's still a big question: Where do those amazing physics facts actually come from? How does our app conjure up new wonders of the universe? The answer lies in the **AI Fact Generation Service**.
 
@@ -19,7 +19,7 @@ This service acts as a **translator** and **gatekeeper** between our simple app 
 
 ## How the App Asks for a Fact
 
-In [Chapter 2: Application State Management](tutorials/02_application_state_management_.md), we saw the `handleGenerateFact` function. This is where our app *requests* a new fact. Inside this function, there's a special line that calls our AI Fact Generation Service:
+In [Chapter 2: Application State Management](02_application_state_management_.md), we saw the `handleGenerateFact` function. This is where our app *requests* a new fact. Inside this function, there's a special line that calls our AI Fact Generation Service:
 
 ```typescript
 // --- File: App.tsx (part of handleGenerateFact) ---
@@ -51,7 +51,7 @@ const App: React.FC = () => {
 *   `const newFact = await generatePhysicsFact();`: This is the crucial line.
     *   `generatePhysicsFact()`: This is the function in our service that does all the heavy lifting of talking to the AI.
     *   `await`: This keyword is like telling your computer, "Wait here! This might take a moment. Don't do anything else until `generatePhysicsFact()` has finished its job and given me the fact." This is important because talking to an AI over the internet takes time.
-*   `setFact(newFact);`: Once `generatePhysicsFact()` returns the `newFact`, we use `setFact` (from [Chapter 2](tutorials/02_application_state_management_.md)) to update the app's internal memory. This automatically triggers the UI to display the new fact!
+*   `setFact(newFact);`: Once `generatePhysicsFact()` returns the `newFact`, we use `setFact` (from [Chapter 2](02_application_state_management_.md)) to update the app's internal memory. This automatically triggers the UI to display the new fact!
 
 This single line (`await generatePhysicsFact();`) hides all the complexity of talking to an AI model, thanks to our specialized service.
 
@@ -190,9 +190,9 @@ In this flow:
 
 In this chapter, we explored the "brain" of `COSMIC-QUERIES`: the **AI Fact Generation Service**. We learned that this service acts as a vital bridge between our app and a powerful external AI model like Google Gemini. It handles the complexities of secure access (`API_KEY`), clear communication (`PROMPT`), and careful processing of responses, ensuring that our app receives crisp, ready-to-display physics facts.
 
-Understanding this service is key to seeing how our app brings the wonders of the cosmos directly to your screen! Next, we'll dive into how we make parts of our UI neat and reusable in [Chapter 4: Reusable UI Components](tutorials/04_reusable_ui_components_.md).
+Understanding this service is key to seeing how our app brings the wonders of the cosmos directly to your screen! Next, we'll dive into how we make parts of our UI neat and reusable in [Chapter 4: Reusable UI Components](04_reusable_ui_components_.md).
 
-[Next Chapter: Reusable UI Components](tutorials/04_reusable_ui_components_.md)
+[Next Chapter: Reusable UI Components](04_reusable_ui_components_.md)
 
 ---
 
